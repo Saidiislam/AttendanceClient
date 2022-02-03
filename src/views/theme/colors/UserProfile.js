@@ -1,4 +1,5 @@
 import QRCode from 'qrcode.react'
+import Sharelink from './components/Sharelink'
 import { useBarcode } from 'react-barcodes'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState, createRef } from 'react'
@@ -123,6 +124,11 @@ const UserProfile = () => {
                 <h6 style={{ textAlign: 'center' }}>Get Your BarCode</h6>{' '}
                 <CListGroupItem style={{ textAlign: 'center' }}>
                   <svg alt="BarCode" className="svgClass" ref={inputRef} />
+                  <br />
+                  <Sharelink style={{  }}
+                  label="Share"
+                  title="Here's Your Code"
+                  text="Grab your code here"/>
                 </CListGroupItem>
               </CListGroup>
             </CCard>
